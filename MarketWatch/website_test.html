@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock & Watchlist API Tester</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .error-message {
+            color: #d9534f;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Grid layout for displaying multiple stocks efficiently */
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stock-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+            .stock-item h4 {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+            }
+
+            .stock-item p {
+                margin: 5px 0;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Check Stock Price</h2>
+    <p>Enter a ticker symbol (e.g., AAPL, MSFT, TSLA, NVDA):</p>
+
+    <div>
+        <input type="text" id="tickerInput" placeholder="Ticker symbol...">
+        <button onclick="fetchStock()">Search Stock</button>
+    </div>
+
+    <div id="resultContainer" class="card" style="display: none;">
+        <h3 id="stockName"></h3>
+        <p><strong>Price:</strong> $<span id="stockPrice"></span></p>
+        <p><strong>Trend:</strong> <span id="stockTrend"></span>%</p>
+
+        <h4>Raw JSON Data:</h4>
+        <pre id="rawJson"></pre>
+    </div>
+
+    <div id="errorContainer" class="error-message">
+        Stock not found.
+    </div>
+
+    <hr>
+
+    <h2>Load Watchlist</h2>
+    <p>Enter a Watchlist ID to view tracked stocks:</p>
+
+    <div>
+        <input type="number" id="watchlistInput" placeholder="Watchlist ID...">
+        <button onclick="fetchWatchlist()">Load Watchlist</button>
+    </div>
+
+    <div id="watchlistResultContainer" class="card" style="display: none;">
+        <h3 id="watchlistTitle"></h3>
+        <div id="watchlistGrid" class="stock-grid"></div>
+    </div>
+
+    <div id="watchlistErrorContainer" class="error-message">
+        Watchlist not found.
+    </div>
+
+    <script>
+        const urlendpoint = "https://localhost:7088";
+
+        // Logic for single stock retrieval
+        async function fetchStock() {
+            const ticker = document.getElementById('tickerInput').value.trim();
+            const resultContainer = document.getElementById('resultContainer');
+            const errorContainer = document.getElementById('errorContainer');
+
+            resultContainer.style.display = 'none';
+            errorContainer.style.display = 'none';
+
+            if (!ticker) {
+                alert("Please enter a ticker symbol.");
+                return;
+            }
+
+            try {
+                const response = await fetch(`${urlendpoint}/api/stock/${ticker}`);
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    document.getElementById('stockName').innerText = `${data.companyName} (${data.ticker})`;
+                    document.getElementById('stockPrice').innerText = data.currentPrice.toFixed(2);
+                    document.getElementById('stockTrend').innerText = data.percentChange;
+                    document.getElementById('rawJson').innerText = JSON.stringify(data, null, 2);
+
+                    resultContainer.style.display = 'block';
+                } else {
+                    errorContainer.style.display = 'block';
+                }
+            } catch (error) {
+                console.error("Error fetching stock:", error);
+                alert("Failed to connect to the API. Ensure your backend is running.");
+            }
+        }
+
+        // Logic for Watchlist retrieval
+        async function fetchWatchlist() {
+            const id = document.getElementById('watchlistInput').value.trim();
+            const resultContainer = document.getElementById('watchlistResultContainer');
+            const errorContainer = document.getElementById('watchlistErrorContainer');
+            const grid = document.getElementById('watchlistGrid');
+
+            // Reset UI state
+            resultContainer.style.display = 'none';
+            errorContainer.style.display = 'none';
+            grid.innerHTML = '';
+
+            if (!id) {
+                alert("Please enter a Watchlist ID.");
+                return;
+            }
+
+            try {
+                const response = await fetch(`${urlendpoint}/api/watchlist/${id}`);
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    document.getElementById('watchlistTitle').innerText = `Watchlist #${data.id}`;
+
+                    // Dynamically build cards for each stock returned in the watchlist
+                    if (data.tickers && data.tickers.length > 0) {
+                        data.tickers.forEach(stock => {
+                            const stockCard = document.createElement('div');
+                            stockCard.className = 'stock-item';
+                            stockCard.innerHTML = `
+                                    <h4>${stock.companyName} (${stock.ticker})</h4>
+                                    <p><strong>Price:</strong> $${stock.currentPrice.toFixed(2)}</p>
+                                    <p><strong>Trend:</strong> ${stock.percentChange}%</p>
+                                `;
+                            grid.appendChild(stockCard);
+                        });
+                    } else {
+                        grid.innerHTML = '<p>This watchlist is currently empty.</p>';
+                    }
+
+                    resultContainer.style.display = 'block';
+                } else {
+                    errorContainer.style.display = 'block';
+                }
+            } catch (error) {
+                console.error("Error fetching watchlist:", error);
+                alert("Failed to connect to the API. Ensure your backend is running.");
+            }
+        }
+    </script>
+</body>
+</html>

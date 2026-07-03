@@ -1,0 +1,6 @@
+@MarketWatch_HostAddress = http://localhost:5166
+
+GET {{MarketWatch_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
