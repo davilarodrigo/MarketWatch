@@ -222,6 +222,13 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "stocks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Stock"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

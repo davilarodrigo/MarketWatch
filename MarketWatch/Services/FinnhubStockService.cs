@@ -1,7 +1,9 @@
 using MarketWatch.Models;
 using MarketWatch.Services;
+using MarketWatch.Data; 
 using Microsoft.Extensions.Configuration;
 using System.Net.Http.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace MarketWatch.Services
 {
@@ -9,18 +11,31 @@ namespace MarketWatch.Services
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
+        private readonly ApplicationDbContext _context; // Add EF Core context
 
-        public FinnhubStockService(HttpClient httpClient, IConfiguration configuration)
+        // add DbContext 
+        public FinnhubStockService(HttpClient httpClient, IConfiguration configuration, ApplicationDbContext context)
         {
             _httpClient = httpClient;
-            _apiKey = configuration["Finnhub:ApiKey"] ?? throw new InvalidOperationException("Finnhub ApiKey not found"); ;
+            _apiKey = configuration["Finnhub:ApiKey"] ?? throw new InvalidOperationException("Finnhub ApiKey not found");
+            _context = context;
         }
 
         public async Task<Stock> GetStockByTickerAsync(string ticker)
         {
-            //rewrite ticker in uppercase for the finnhub api (does not work otherwise)
             ticker = ticker.ToUpper();
 
+            // first search bd
+            var existingStock = await _context.Stocks
+                .FirstOrDefaultAsync(s => s.Ticker == ticker);
+
+            // if it is in the BD and it is recent data (<1h) return it
+            if (existingStock != null && (DateTime.UtcNow - existingStock.LastUpdated) < TimeSpan.FromHours(1))
+            {
+                return existingStock;
+            }
+
+            // if there is no data or it is old, do request to api
             var url = $"https://finnhub.io/api/v1/quote?symbol={ticker}&token={_apiKey}";
 
             try
@@ -30,29 +45,47 @@ namespace MarketWatch.Services
                 if (response == null || response.CurrentPrice == 0)
                     return null;
 
-                return new Stock
+                // 4. Actualizar o Crear el registro en la Base de Datos
+                if (existingStock != null)
                 {
-                    Ticker = ticker,
-                    CurrentPrice = response.CurrentPrice,
-                    PriceChange = response.Change
-                };
+                    // Actualizamos el existente
+                    existingStock.CurrentPrice = (decimal)response.CurrentPrice;
+                    existingStock.PriceChange = response.Change;
+                    existingStock.LastUpdated = DateTime.UtcNow;
+
+                    _context.Stocks.Update(existingStock);
+                }
+                else
+                {
+                    // Creamos uno nuevo
+                    existingStock = new Stock
+                    {
+                        Ticker = ticker,
+                        CurrentPrice = (decimal)response.CurrentPrice,
+                        PriceChange = response.Change,
+                        LastUpdated = DateTime.UtcNow
+                    };
+
+                    _context.Stocks.Add(existingStock);
+                }
+
+                // 5. Guardar los cambios en la BD
+                await _context.SaveChangesAsync();
+
+                return existingStock;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 throw;
             }
-
         }
     }
 
     public class FinnhubQuote
     {
-        //Example of api response
-        //"{\"c\":0,\"d\":null,\"dp\":null,\"h\":0,\"l\":0,\"o\":0,\"pc\":0,\"t\":0}"
-        //"{\"c\":298.05,\"d\":2.1,\"dp\":0.7096,\"h\":300.57,\"l\":295.62,\"o\":298.12,\"pc\":295.95,\"t\":1781812800}"
-        public decimal? c { get; set; } // Current price
-        public decimal? d { get; set; } // Change
+        public decimal? c { get; set; }
+        public decimal? d { get; set; }
         public decimal? CurrentPrice => c;
         public decimal? Change => d;
     }

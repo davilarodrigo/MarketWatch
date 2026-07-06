@@ -27,11 +27,34 @@
             display: none;
         }
 
+        .success-message {
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+
         input, button {
             padding: 10px;
             font-size: 16px;
             margin-right: 10px;
             margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         pre {
@@ -71,6 +94,26 @@
             .stock-item p {
                 margin: 5px 0;
             }
+
+        /* Styles for the pending tickers tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #e2e3e5;
+            color: #383d41;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -80,14 +123,13 @@
 
     <div>
         <input type="text" id="tickerInput" placeholder="Ticker symbol...">
-        <button onclick="fetchStock()">Search Stock</button>
+        <button class="btn-primary" onclick="fetchStock()">Search Stock</button>
     </div>
 
     <div id="resultContainer" class="card" style="display: none;">
         <h3 id="stockName"></h3>
         <p><strong>Price:</strong> $<span id="stockPrice"></span></p>
         <p><strong>Trend:</strong> <span id="stockTrend"></span>%</p>
-
         <h4>Raw JSON Data:</h4>
         <pre id="rawJson"></pre>
     </div>
@@ -98,12 +140,33 @@
 
     <hr>
 
+    <h2>Create New Watchlist</h2>
+    <p>Type a ticker and press <strong>Enter</strong> to add it to your pending list:</p>
+
+    <div>
+        <input type="text" id="newTickerInput" placeholder="Ticker (e.g., AMZN)...">
+        <button class="btn-primary" onclick="addTickerToList()">Add Ticker</button>
+    </div>
+
+    <div class="card">
+        <h4>Pending Tickers:</h4>
+        <div id="pendingTickers" class="tag-container">
+            <span style="color: #888; font-weight: normal; font-size: 14px;">No tickers added yet.</span>
+        </div>
+
+        <button class="btn-success" onclick="saveWatchlist()">Save Watchlist</button>
+
+        <div id="createMessageContainer"></div>
+    </div>
+
+    <hr>
+
     <h2>Load Watchlist</h2>
     <p>Enter a Watchlist ID to view tracked stocks:</p>
 
     <div>
         <input type="number" id="watchlistInput" placeholder="Watchlist ID...">
-        <button onclick="fetchWatchlist()">Load Watchlist</button>
+        <button class="btn-primary" onclick="fetchWatchlist()">Load Watchlist</button>
     </div>
 
     <div id="watchlistResultContainer" class="card" style="display: none;">
@@ -118,7 +181,9 @@
     <script>
         const urlendpoint = "https://localhost:7088";
 
-        // Logic for single stock retrieval
+        // ==========================================
+        // SINGLE STOCK LOGIC
+        // ==========================================
         async function fetchStock() {
             const ticker = document.getElementById('tickerInput').value.trim();
             const resultContainer = document.getElementById('resultContainer');
@@ -153,14 +218,98 @@
             }
         }
 
-        // Logic for Watchlist retrieval
+        // ==========================================
+        // CREATE WATCHLIST LOGIC
+        // ==========================================
+        let pendingTickersList = [];
+
+        // Listen for "Enter" key on the input field
+        document.getElementById('newTickerInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addTickerToList();
+            }
+        });
+
+        function addTickerToList() {
+            const input = document.getElementById('newTickerInput');
+            const ticker = input.value.trim().toUpperCase();
+
+            if (ticker && !pendingTickersList.includes(ticker)) {
+                pendingTickersList.push(ticker);
+                renderPendingTickers();
+            }
+            input.value = '';
+        }
+
+        function renderPendingTickers() {
+            const container = document.getElementById('pendingTickers');
+            container.innerHTML = '';
+
+            if (pendingTickersList.length === 0) {
+                container.innerHTML = '<span style="color: #888; font-weight: normal; font-size: 14px;">No tickers added yet.</span>';
+                return;
+            }
+
+            pendingTickersList.forEach(t => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.innerText = t;
+                container.appendChild(span);
+            });
+        }
+
+        async function saveWatchlist() {
+            const msgContainer = document.getElementById('createMessageContainer');
+            msgContainer.className = '';
+            msgContainer.innerText = '';
+
+            if (pendingTickersList.length === 0) {
+                msgContainer.innerText = "Please add at least one ticker before saving.";
+                msgContainer.className = "error-message";
+                msgContainer.style.display = "block";
+                return;
+            }
+
+            try {
+                // Sending the raw array directly as requested: ["AAPL", "MSFT"]
+                const response = await fetch(`${urlendpoint}/api/watchlist`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(pendingTickersList)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    msgContainer.innerText = `Success! Watchlist created successfully. ID: ${data.id || 'Saved'}`;
+                    msgContainer.className = "success-message";
+                    msgContainer.style.display = "block";
+
+                    // Reset the UI for a new list
+                    pendingTickersList = [];
+                    renderPendingTickers();
+                } else {
+                    msgContainer.innerText = "Failed to create Watchlist. Ensure the payload matches your API model.";
+                    msgContainer.className = "error-message";
+                    msgContainer.style.display = "block";
+                }
+            } catch (error) {
+                console.error("Error saving watchlist:", error);
+                alert("Failed to connect to the API. Ensure your backend is running.");
+            }
+        }
+
+        // ==========================================
+        // LOAD WATCHLIST LOGIC
+        // ==========================================
         async function fetchWatchlist() {
             const id = document.getElementById('watchlistInput').value.trim();
             const resultContainer = document.getElementById('watchlistResultContainer');
             const errorContainer = document.getElementById('watchlistErrorContainer');
             const grid = document.getElementById('watchlistGrid');
 
-            // Reset UI state
             resultContainer.style.display = 'none';
             errorContainer.style.display = 'none';
             grid.innerHTML = '';
@@ -178,15 +327,13 @@
 
                     document.getElementById('watchlistTitle').innerText = `Watchlist #${data.id}`;
 
-                    // Dynamically build cards for each stock returned in the watchlist
-                    if (data.tickers && data.tickers.length > 0) {
-                        data.tickers.forEach(stock => {
+                    if (data.stocks && data.stocks.length > 0) {
+                        data.stocks.forEach(stock => {
                             const stockCard = document.createElement('div');
                             stockCard.className = 'stock-item';
                             stockCard.innerHTML = `
-                                    <h4>${stock.companyName} (${stock.ticker})</h4>
-                                    <p><strong>Price:</strong> $${stock.currentPrice.toFixed(2)}</p>
-                                    <p><strong>Trend:</strong> ${stock.percentChange}%</p>
+                                    <h4>${stock.companyName || stock.ticker} (${stock.ticker})</h4>
+                                    <p><strong>Price:</strong> $${stock.currentPrice ? stock.currentPrice.toFixed(2) : '0.00'}</p>
                                 `;
                             grid.appendChild(stockCard);
                         });

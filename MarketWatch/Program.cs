@@ -1,6 +1,6 @@
+using MarketWatch.Data;
 using MarketWatch.Services;
-
-
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +25,12 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddSingleton<IStockService, MockStockService>();
 //builder.Services.AddSingleton<IStockService, FinnhubStockService>();
 builder.Services.AddHttpClient<IStockService, FinnhubStockService>();
-builder.Services.AddSingleton<IWatchlistService, WatchlistMockService>();
+//builder.Services.AddSingleton<IWatchlistService, WatchlistService>(); //can no longer be singleton once it has a reference to the stock service
+builder.Services.AddScoped<IWatchlistService, WatchlistService>();
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

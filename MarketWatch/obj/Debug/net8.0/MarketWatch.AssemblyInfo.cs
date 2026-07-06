@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarketWatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96f120f0733fb9e275042aa857af8c616eb1de14")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarketWatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarketWatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

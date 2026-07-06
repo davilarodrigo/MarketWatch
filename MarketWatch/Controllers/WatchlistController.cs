@@ -19,7 +19,7 @@ namespace MarketWatch.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Watchlist>> Get(int id)
         {
-            var watchlist = await _watchlistService.GetWatchlistAsync(id);
+            Watchlist? watchlist = await _watchlistService.GetWatchlistAsync(id);
 
             if (watchlist == null)
             {
