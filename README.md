@@ -22,10 +22,10 @@ Most junior portfolios stop at simple CRUD applications. MarketWatch is engineer
 * [cite_start]**Development Toggle:** Built-in Mock Services enabling seamless offline testing and frontend prototyping without exhausting API credits[cite: 36].
 
 ### 🗺️ Production Roadmap (Upcoming MVPs)
-* [cite_start][ ] **Automated Background Worker (MVP 4):** Implementing .NET's native `BackgroundService` to poll market prices, calculate opportunities every $X$ minutes, and cache results independently of user requests[cite: 13, 14].
-* [cite_start][ ] **Multi-Channel Notifications (MVP 6):** Real-time alerts dispatched directly to Discord Webhooks or Telegram Bots when market anomalies trigger[cite: 16].
-* [cite_start][ ] **LLM-Powered Analysis (MVP 7):** Integrating an internal LLM to transform deterministic string responses (e.g., "Dropped 8%") into nuanced, AI-generated financial context summaries[cite: 6, 17, 18].
-* [cite_start][ ] **Advanced Security & Auth (MVP 8 & 9):** Moving from local persistence to individual user environments secured by JWT, Role-Based Access Control, and External OAuth (Google/GitHub)[cite: 19, 20].
+* **Automated Background Worker (MVP 4):** Implementing .NET's native `BackgroundService` to poll market prices, calculate opportunities every $X$ minutes, and cache results independently of user requests[cite: 13, 14].
+* **Multi-Channel Notifications (MVP 6):** Real-time alerts dispatched directly to Discord Webhooks or Telegram Bots when market anomalies trigger[cite: 16].
+* **LLM-Powered Analysis (MVP 7):** Integrating an internal LLM to transform deterministic string responses (e.g., "Dropped 8%") into nuanced, AI-generated financial context summaries[cite: 6, 17, 18].
+* **Advanced Security & Auth (MVP 8 & 9):** Moving from local persistence to individual user environments secured by JWT, Role-Based Access Control, and External OAuth (Google/GitHub)[cite: 19, 20].
 
 ---
 
