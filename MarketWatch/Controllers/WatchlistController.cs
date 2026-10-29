@@ -1,7 +1,8 @@
+using MarketWatch.Interfaces;
 using MarketWatch.Models;
-using MarketWatch.Services;
 using Microsoft.AspNetCore.Mvc;
 
+/*
 namespace MarketWatch.Controllers
 {
     [ApiController]
@@ -54,4 +55,4 @@ namespace MarketWatch.Controllers
             return NoContent(); // 204 No Content (successful delete)
         }
     }
-}
+}*/

@@ -3,48 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\controllers\\watchlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\website_test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\website_test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\services\\watchlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\services\\watchlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\services\\istockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\services\\istockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\mocks\\mockstockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\mocks\\mockstockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\mocks\\watchlistmockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\mocks\\watchlistmockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|c:\\users\\rodrigo sebastian\\source\\repos\\marketwatch\\marketwatch\\marketwatch.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{BEC9C03B-E7B3-4BF9-A1D5-3CAE477937DA}|MarketWatch\\MarketWatch.csproj|solutionrelative:marketwatch\\marketwatch.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,45 +46,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 458,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwHUAAAAGAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-07-06T23:40:09.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WatchlistController.cs",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\WatchlistController.cs",
-              "RelativeDocumentMoniker": "MarketWatch\\Controllers\\WatchlistController.cs",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\WatchlistController.cs",
-              "RelativeToolTip": "MarketWatch\\Controllers\\WatchlistController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAIwCMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T22:24:05.06Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "website_test.html",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\website_test.html",
-              "RelativeDocumentMoniker": "MarketWatch\\website_test.html",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\website_test.html",
-              "RelativeToolTip": "MarketWatch\\website_test.html",
-              "ViewState": "AgIAAAoBAAAAnDMzMzMZwBcBAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-06-17T20:55:05.355Z",
+              "Title": "FinnhubService.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\FinnhubService.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Services\\FinnhubService.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\FinnhubService.cs",
+              "RelativeToolTip": "MarketWatch\\Services\\FinnhubService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:46:44.856Z",
               "EditorCaption": ""
             },
             {
@@ -103,100 +73,101 @@
               "RelativeDocumentMoniker": "MarketWatch\\Services\\WatchlistService.cs",
               "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\WatchlistService.cs",
               "RelativeToolTip": "MarketWatch\\Services\\WatchlistService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAABQPR4AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T21:47:00.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Program.cs",
-              "RelativeDocumentMoniker": "MarketWatch\\Program.cs",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Program.cs",
-              "RelativeToolTip": "MarketWatch\\Program.cs",
-              "ViewState": "AgIAABYAAACAcWZmZmYTwBwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T15:02:54.19Z",
+              "WhenOpened": "2026-10-29T18:34:31.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IStockService.cs",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\IStockService.cs",
-              "RelativeDocumentMoniker": "MarketWatch\\Services\\IStockService.cs",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\IStockService.cs",
-              "RelativeToolTip": "MarketWatch\\Services\\IStockService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Title": "MockStockService.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Mocks\\MockStockService.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Mocks\\MockStockService.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Mocks\\MockStockService.cs",
+              "RelativeToolTip": "MarketWatch\\Mocks\\MockStockService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T20:17:24.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MarketWatch\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MarketWatch\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABEAAACgNDMzM7MiwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-05T21:27:35.733Z",
+              "WhenOpened": "2026-10-29T18:33:54.051Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\appsettings.json",
-              "RelativeDocumentMoniker": "MarketWatch\\appsettings.json",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\appsettings.json",
-              "RelativeToolTip": "MarketWatch\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-05T21:27:42.541Z",
+              "Title": "WatchlistMockService.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Mocks\\WatchlistMockService.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Mocks\\WatchlistMockService.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Mocks\\WatchlistMockService.cs",
+              "RelativeToolTip": "MarketWatch\\Mocks\\WatchlistMockService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:33:38.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockService.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\StockService.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Services\\StockService.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Services\\StockService.cs",
+              "RelativeToolTip": "MarketWatch\\Services\\StockService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:25:30.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "MarketWatch\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:24:58.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Program.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Program.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Program.cs*",
+              "RelativeToolTip": "MarketWatch\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:23:50.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WatchlistController.cs",
+              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\WatchlistController.cs",
+              "RelativeDocumentMoniker": "MarketWatch\\Controllers\\WatchlistController.cs",
+              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\WatchlistController.cs",
+              "RelativeToolTip": "MarketWatch\\Controllers\\WatchlistController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T18:52:08.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "MarketWatch\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\appsettings.Development.json",
-              "RelativeToolTip": "MarketWatch\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-20T15:28:09.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "StockController.cs",
               "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\StockController.cs",
               "RelativeDocumentMoniker": "MarketWatch\\Controllers\\StockController.cs",
               "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\Controllers\\StockController.cs",
               "RelativeToolTip": "MarketWatch\\Controllers\\StockController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T14:45:15.008Z",
+              "WhenOpened": "2026-10-29T17:08:48.893Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MarketWatch.http",
-              "DocumentMoniker": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\MarketWatch.http",
-              "RelativeDocumentMoniker": "MarketWatch\\MarketWatch.http",
-              "ToolTip": "C:\\Users\\rodrigo sebastian\\source\\repos\\MarketWatch\\MarketWatch\\MarketWatch.http",
-              "RelativeToolTip": "MarketWatch\\MarketWatch.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-20T15:20:32.119Z"
             }
           ]
         }

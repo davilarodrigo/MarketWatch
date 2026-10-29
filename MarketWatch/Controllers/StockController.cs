@@ -1,5 +1,5 @@
+using MarketWatch.Interfaces;
 using MarketWatch.Models;
-using MarketWatch.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MarketWatch.Controllers
@@ -10,7 +10,6 @@ namespace MarketWatch.Controllers
     {
         private readonly IStockService _stockService;
 
-        // Dependency injection handles bringing in the service
         public StockController(IStockService stockService)
         {
             _stockService = stockService;

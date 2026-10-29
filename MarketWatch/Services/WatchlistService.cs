@@ -5,8 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using MarketWatch.Data;
 using Microsoft.EntityFrameworkCore;
+using MarketWatch.Interfaces;
 
-
+/*
 namespace MarketWatch.Services
 {
     public class WatchlistService : IWatchlistService
@@ -77,4 +78,4 @@ namespace MarketWatch.Services
             return true;
         }
     }
-}
+}*/

@@ -1,10 +1,10 @@
 using MarketWatch.Data;
+using MarketWatch.Interfaces;
 using MarketWatch.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// disables cors
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -15,19 +15,14 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddSingleton<IStockService, MockStockService>();
-//builder.Services.AddSingleton<IStockService, FinnhubStockService>();
-builder.Services.AddHttpClient<IStockService, FinnhubStockService>();
-//builder.Services.AddSingleton<IWatchlistService, WatchlistService>(); //can no longer be singleton once it has a reference to the stock service
-builder.Services.AddScoped<IWatchlistService, WatchlistService>();
-
+builder.Services.AddHttpClient<IFinnhubService, FinnhubService>();
+builder.Services.AddScoped<IStockService, StockService>();
+//builder.Services.AddScoped<IWatchlistService, WatchlistService>();//can no longer be singleton once it has a reference to the stock service
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));

@@ -1,6 +1,7 @@
+using MarketWatch.Interfaces;
 using MarketWatch.Models;
-
-namespace MarketWatch.Services
+/*
+namespace MarketWatch.Mocks
 {
     public class MockStockService : IStockService
     {
@@ -18,4 +19,4 @@ namespace MarketWatch.Services
             return await Task.FromResult(mockStocks);
         }
     }
-}
+}*/

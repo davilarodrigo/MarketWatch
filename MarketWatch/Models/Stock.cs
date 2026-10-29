@@ -4,8 +4,7 @@ namespace MarketWatch.Models
 {
     public class Stock
     {
-        [Key]
-        public string Ticker { get; set; } = string.Empty;
+        [Key] public string Ticker { get; set; } = string.Empty;
         public string CompanyName { get; set; } = string.Empty;
         public decimal? CurrentPrice { get; set; }
         public decimal? PriceChange { get; set; }

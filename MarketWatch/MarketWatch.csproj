@@ -8,13 +8,9 @@
 
   <ItemGroup>
     <Compile Remove="Services\NewFolder1\**" />
-    <Compile Remove="Services\NewFolder\**" />
     <Content Remove="Services\NewFolder1\**" />
-    <Content Remove="Services\NewFolder\**" />
     <EmbeddedResource Remove="Services\NewFolder1\**" />
-    <EmbeddedResource Remove="Services\NewFolder\**" />
     <None Remove="Services\NewFolder1\**" />
-    <None Remove="Services\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +20,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
 
 </Project>
